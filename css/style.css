@@ -1,3 +1,15 @@
-.header {
-  color : green;
+.link {
+  text-align: center;
+}
+
+a:visited,:active {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
