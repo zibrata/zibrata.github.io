@@ -1,3 +1,21 @@
+/*test de police upload avec fontsquirrel*/
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('../fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('../fonts/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-webfont.woff2') format('woff2'),
+         url('../fonts/lato-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body,
 html {
     width: 100%;
@@ -11,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "latoregular";/*,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-weight: 700;
 }
 
