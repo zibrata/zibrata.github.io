@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Voiture</title>
+    <link rel="icon" type ="image/x-icon" href="img/favicon-bitcoin.ico">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page-voiture.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+  <h2 class="titre">Appli voiture</h2>
+
+  <div class="formulaire">
+
+    <script type="text/javascript">
+      function bonjour() {
+        alert('bonjour à tous');
+      }
+    </script>
+    <a class="btn btn-lg btn-primary" onclick="division()"><span class="glyphicon glyphicon-road"></span> Test</a>
+    <br><br><br>
+
+
+    <script type="text/javascript">
+
+      function calcul_prix_essence(km,nombre_personne,litre) {
+
+      }
+
+      function division() {
+        var nb = prompt('Rentrez un nombre : ');
+        var diviser = nb / 2;
+        return diviser;
+      }
+
+      function afficher() {
+        var nb = division();
+        alert(nb);
+      }
+
+      function conversion() {
+        var nb = prompt('Rentre un nombre : ');
+        var nb_francs = nb * 6,55957;
+        alert(nb + '€ équivaut à ' + nb_francs + 'Frs');
+      }
+
+
+      function Multiplication() {
+        var nb1 = prompt('Rentrez un premier nombre : ');
+        var nb2 = prompt('Rentrez un deuxieme nombre : ');
+        alert('Multiplication de '+nb1+ ' par '+nb2);
+        resultat = nb1*nb2;
+        alert(nb1+' x '+nb2+' = '+resultat);
+      }
+
+    </script>
+  </div>
+</body>
