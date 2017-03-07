@@ -22,55 +22,31 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- JS Scripts -->
+    <script type="text/javascript" src="js/voiture.js"></script>
 
 </head>
 
 <body>
-  <h2 class="titre">Appli voiture</h2>
+  <h2 class="titre">Test JS</h2>
+
 
   <div class="formulaire">
-
-    <script type="text/javascript">
-      function bonjour() {
-        alert('bonjour à tous');
-      }
-    </script>
-    <a class="btn btn-lg btn-primary" onclick="division()"><span class="glyphicon glyphicon-road"></span> Test</a>
+    <button type="button" class="btn btn-primary" src="js/voiture.js" onclick="todo()">Todo List</button>
     <br><br><br>
+<!-- cc -->
+    <button type="button" class="btn btn-secondary" src="js/voiture.js" onclick="isEven()">isEven</button>
+    <button type="button" class="btn btn-secondary" src="js/voiture.js" onclick="factorial()">Factorial</button>
 
-
-    <script type="text/javascript">
-
-      function calcul_prix_essence(km,nombre_personne,litre) {
-
-      }
-
-      function division() {
-        var nb = prompt('Rentrez un nombre : ');
-        var diviser = nb / 2;
-        return diviser;
-      }
-
-      function afficher() {
-        var nb = division();
-        alert(nb);
-      }
-
-      function conversion() {
-        var nb = prompt('Rentre un nombre : ');
-        var nb_francs = nb * 6,55957;
-        alert(nb + '€ équivaut à ' + nb_francs + 'Frs');
-      }
-
-
-      function Multiplication() {
-        var nb1 = prompt('Rentrez un premier nombre : ');
-        var nb2 = prompt('Rentrez un deuxieme nombre : ');
-        alert('Multiplication de '+nb1+ ' par '+nb2);
-        resultat = nb1*nb2;
-        alert(nb1+' x '+nb2+' = '+resultat);
-      }
-
-    </script>
   </div>
+
+  <h2>Todo List</h2>
+  <ul>
+    <li>"add" - Add a todo</li>
+    <li>"list" - View all todos</li>
+    <li>"delete" - Delete a todo</li>
+    <li>"quit" - Quit app</li>
+  </ul>
+
+  </ul>
 </body>
