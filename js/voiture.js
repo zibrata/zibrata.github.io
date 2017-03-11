@@ -11,22 +11,35 @@ function printReverse(tab) {
   }
 }
 
-var movies = [
-  {
-    title : "Harry Potter 7",
-    watched : true,
-    rating : 5
-  },
-  {
-    title : "Mad Max",
-    watched : false,
-  },
-  {
-    title : "Snowden",
-    watched : true,
-    rating : 4.5
+function film() {
+  console.log("coucou");
+  var movies = [
+    {
+      title : "Harry Potter 7",
+      watched : true,
+      rating : 5
+    },
+    {
+      title : "Mad Max",
+      watched : false
+    },
+    {
+      title : "Snowden",
+      watched : true,
+      rating : 4.5
+    }
+  ]
+  var result = "You have ";
+  while (movies != null) {
+    if(movies.watched == true) {
+      result += "watched";
+    }
+    else if(movies.watched == false) {
+      result += "not watched";
+    }
+    console.log(result + " " + movies.title + " - " + movies.rating + " rating.");
   }
-]
+}
 
 
 
@@ -132,25 +145,31 @@ function factorial() {
   return nb;
 }
 
-
-
-
 //guessing game
 function guessingGame() {
-  var random = Math.floor(Math.random() * 11); //stipule que le rand sera entre 0 et 10
-  var choix = prompt("Veuillez rentrez un chiffre entre 0 et 10");
-  while (Number(choix) != random) {
+  var random = Math.floor(Math.random() * 101); //stipule que le rand sera entre 0 et 100
+  var choix = prompt("Veuillez rentrez un chiffre entre 0 et 100");
+  var compteur = 0;
+  var coupsRestant = 5;
+  console.log(random);
+  while (Number(choix) != random && compteur < 6) {
+    var choixPrecedent = choix;
     if (choix < random) {
-      choix = prompt("Trop petit, veuillez recommencer");
+      choix = prompt(choixPrecedent + " était trop petit, veuillez recommencer. Il vous reste " + coupsRestant + " essais");
     }
     if (choix > random) {
-      choix = prompt("Trop grand, veuillez recommencer");
+      choix = prompt(choixPrecedent + " était trop grand, veuillez recommencer. Il vous reste " + coupsRestant + " essais");
     }
     if (choix == random) {
+      alert("Vous avez gagné en " + compteur + " coups.");
       break;
     }
+    --coupsRestant;
+    ++compteur;
   }
-  alert("Bravo vous avez trouvé");
+  if (choix != random || compteur == 5) {
+    alert("Vous avez perdu. Le nombre random était : " + random);
+  }
 }
 
 
