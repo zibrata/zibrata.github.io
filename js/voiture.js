@@ -5,43 +5,57 @@
   ville : "Croissy-sur-Seine"
 };*/
 
+var movies = [
+  {
+    title : "Harry Potter 7",
+    watched : true,
+    rating : 5
+  },
+  {
+    title : "Mad Max",
+    watched : false,
+    rating : 4
+  },
+  {
+    title : "Snowden",
+    watched : true,
+    rating : 4.5
+  }
+]
+
+/*function film() {
+  movies.forEach(function movieDB(movies) {
+    var result = "You have ";
+    if (movies.watched) {
+      result += "watched " + movies.title + " - " + movies.rating + " stars";
+    }
+    else {
+      result += "not seen " + movies.title + " - " + movies.rating + " stars";
+    }
+    console.log(result);
+  })
+}*/
+
+movies.forEach(function filmDB(movies) {
+  console.log(toString(movies));
+});
+
+function toString(movies) {
+  var result = "You have ";
+  if (movies.watched) {
+    result += "watched " + movies.title + " - " + movies.rating + " stars";
+  }
+  else {
+    result += "not seen " + movies.title + " - " + movies.rating + " stars";
+  }
+  return result;
+}
+
 function printReverse(tab) {
   for (var i = 0 ; i < tab.length ; ++i) {
     console.log(tab[tab.length - i - 1]);
   }
 }
-
-function film() {
-  console.log("coucou");
-  var movies = [
-    {
-      title : "Harry Potter 7",
-      watched : true,
-      rating : 5
-    },
-    {
-      title : "Mad Max",
-      watched : false
-    },
-    {
-      title : "Snowden",
-      watched : true,
-      rating : 4.5
-    }
-  ]
-  var result = "You have ";
-  while (movies != null) {
-    if(movies.watched == true) {
-      result += "watched";
-    }
-    else if(movies.watched == false) {
-      result += "not watched";
-    }
-    console.log(result + " " + movies.title + " - " + movies.rating + " rating.");
-  }
-}
-
-
 
 function isUniform(tab) {
   for (var i = 0 ; i < tab.length ; ++i) {
