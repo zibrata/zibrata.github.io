@@ -21,7 +21,13 @@ body {
 .navbar-default .navbar-brand { /*Pour mettre portfolio en blanc*/
   color: white;
 }
+.navbar-default .navbar-brand:hover { /*Pour mettre portfolio en blanc*/
+  color: gray;
+}
 
 .navbar-default .navbar-nav>li>a {
   color: white;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: gray;
 }
