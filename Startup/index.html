@@ -40,7 +40,22 @@
         <div class="col-lg-12">
           <div id="content">
             <h1>SecuriChild</h1>
-            <h3>A new relation between parent and children</h3>
+            <span id="mySpan" style="font-size: 30px; color: white;"></span>
+            <script type="text/javascript">
+              function extraire() {
+                   character = message.substring(I, I=I+1) ;
+                   if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {
+                        character = "<br>" ;
+                        I = I + 5;
+                        }
+                   mySpan.innerHTML += character;
+                   if ( I < message.length ) setTimeout(extraire, 100);
+                   }
+              I = 0 ;
+              message = "A new relation between parent and children";
+              extraire();
+            </script>
+
             <hr>
             <button type="button" class="btn btn-default btn-lg"><i class="fa fa-child" aria-hidden="true"></i> Get started!</button>
           </div>
