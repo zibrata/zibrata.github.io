@@ -31,6 +31,15 @@ h6 {
   font-weight: 700;
 }
 
+.bio {
+  text-align: justify;
+}
+
+.experiences:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
 #mailto {
   color: white;
   font-weight: 400;
@@ -75,7 +84,7 @@ hr.star-primary:after {
 header {
   text-align: center;
   color: white;
-  background-image: url('../img/mac.jpg');
+  background-image: url('../img/test2.jpg');
   background-size: 100% auto;
 }
 header .container {
@@ -182,14 +191,25 @@ header .intro-text .skills {
     font-size: 1.5em;
   }
 }
+
+.hrtitre {
+  width: 24%;
+}
+
+.hrtitrebleu {
+  width: 24%;
+  border-top: 1px solid #536283;
+}
+
 section {
   padding: 100px 0;
+  padding-bottom: 80px;
 }
 section h2 {
-  margin: 0;
-  font-size: 3em;
-  padding-bottom: 28px;
-  margin-top: -36px;
+    margin: 0;
+    font-size: 3em;
+    padding-bottom: 0px;
+    margin-top: -36px;
 }
 section.success {
   background: #536283;
