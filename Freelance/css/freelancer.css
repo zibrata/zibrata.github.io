@@ -75,7 +75,7 @@ hr.star-primary:after {
 header {
   text-align: center;
   color: white;
-  background-image: url('../img/fond.jpg');
+  background-image: url('../img/mac.jpg');
   background-size: 100% auto;
 }
 header .container {
@@ -93,13 +93,13 @@ header .intro-text .name {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
-  color: #808080;
+  color: white;
   padding-top: 2px;
 }
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
-  color: black;
+  color: white;
 
 }
 @media (min-width: 768px) {

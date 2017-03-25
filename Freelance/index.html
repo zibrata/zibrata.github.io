@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Alexandre LEVRET</title>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -77,23 +77,59 @@
                     <div class="intro-text">
                         <h1 class="name">Alexandre LEVRET</h1>
                         <!-- <hr class="star-light"> -->
-                        <span class="skills">Programmeur & Développeur Web</span>
+                        <span id="machineAEcrire" class="skills"></span>
                     </div>
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+        function extraire() {
+          character = message.substring(I, I=I+1) ;
+          if ( character == "-" &&  message.substr(I, 5) == "stop-" ) {
+            character = "<br>" ;
+            I = I + 5;
+          }
+          machineAEcrire.innerHTML += character;
+          if ( I < message.length ) setTimeout(extraire, 100);
+        }
+        I = 0 ;
+        message = "Programmeur & Développeur Web";
+        extraire();
+        </script>
+
     </header>
 
     <!-- Portfolio Grid Section -->
-    <!-- <section id="portfolio">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
+                    <h2>Mes expériences</h2>
+                </div>
+                <div class="col-lg-6">
+                  <div class="thumbnail">
+                    <a href="https://zibrata.github.io/Galery/"><img src="img/galery.png" alt=""></a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="thumbnail">
+                    <img src="img/matelaw.png" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="thumbnail">
+                    <a href="https://zibrata.github.io/Game/"><img src="img/colorgame.png" alt=""></a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="thumbnail">
+                    <a href="https://zibrata.github.io/Startup/"><img src="img/securichild.png" alt=""></a>
+                  </div>
                 </div>
             </div>
-            <div class="row">
+          </div>
+      </section>
+            <!--div class="row">
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -243,8 +279,8 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Adresse</h3>
-                        <p>5 Allée Charles Bonnet
-                            <br>Croissy-sur-Seine, 78290</p>
+                        <p>12, avenue Léonard de Vinci
+                            <br>Courbevoie, France</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Social media</h3>
