@@ -19,7 +19,6 @@
     <link href="../css/landing-page.css" rel="stylesheet">
 
     <!-- JS Scripts -->
-    <script type="text/javascript" src="../js/bitcoin.js"></script>
 
 
     <!-- Custom Fonts -->
@@ -144,6 +143,7 @@
                     	         <code id="peerinfo" class="json kljs"></code>
                 	            </pre>
             	           </div>
+
                            <div class="col-lg-5 col-sm-6">
                                <!--hr class="section-heading-spacer"> <barre horizontale-->
                                <div class="clearfix"></div>
@@ -152,11 +152,56 @@
                                <!--img class="img-responsive" src="img/test.png" alt=""-->
                            </div>
                        </div>
-
+                       <hr class="section-heading-spacer"> <!--barre horizontale-->
                    </div>
 
+                 </div>
 
-       <!-- /.container
+                 <script type="text/javascript">
+                 var xmlhttp = new XMLHttpRequest();
+                 xmlhttp.onreadystatechange = function() {
+                     if (this.readyState == 4 && this.status == 200) {
+                         var myObj = JSON.parse(this.responseText);
+                         document.getElementById("info").innerHTML = "\n blocks: "+myObj.blocks+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
+                     }
+                 };
+                 xmlhttp.open("GET", "http://bitcoin.mubiz.com/info", true);
+                 xmlhttp.send();
 
-   </div>
- </body>
+
+                 var xmlhttp = new XMLHttpRequest();
+                 xmlhttp.onreadystatechange = function() {
+                     if (this.readyState == 4 && this.status == 200) {
+                         var myObj = JSON.parse(this.responseText);
+                         document.getElementById("blockchaininfo").innerHTML = "\n main: "+myObj.main+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
+                     }
+                 };
+                 xmlhttp.open("GET", "http://bitcoin.mubiz.com/blockchaininfo", true);
+                 xmlhttp.send();
+
+                 var xmlhttp = new XMLHttpRequest();
+                 xmlhttp.onreadystatechange = function() {
+                     if (this.readyState == 4 && this.status == 200) {
+                       var myObj = JSON.parse(this.responseText);
+                       document.getElementById("mininginfo").innerHTML = "\n blocks: "+myObj.blocks+"\n difficulty: "+myObj.difficulty+"\n chain: "+myObj.chain;
+                     }
+                 };
+                 xmlhttp.open("GET", "http://bitcoin.mubiz.com/mininginfo", true);
+                 xmlhttp.send();
+
+
+                 // A FAIRE LE PEER INFO
+
+                 var xmlhttp = new XMLHttpRequest();
+                 xmlhttp.onreadystatechange = function() {
+                     if (this.readyState == 4 && this.status == 200) {
+                       var myObj = JSON.parse(this.responseText);
+                       document.getElementById("peerinfo").innerHTML = "\n id: "+myObj.id;
+                     }
+                 };
+                 xmlhttp.open("GET", "http://bitcoin.mubiz.com/peerinfo", true);
+                 xmlhttp.send();
+
+                 </script>
+      </body>
+</html>

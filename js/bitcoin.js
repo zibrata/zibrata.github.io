@@ -9,7 +9,6 @@ xmlhttp.open("GET", "http://bitcoin.mubiz.com/info", true);
 xmlhttp.send();
 
 
-
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -19,8 +18,6 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "http://bitcoin.mubiz.com/blockchaininfo", true);
 xmlhttp.send();
-
-
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -38,9 +35,8 @@ xmlhttp.send();
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myObj = this.responseText;
-        var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-        document.getElementById("peerinfo").innerHTML = jsonPretty;
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById("peerinfo").innerHTML = "\n id: "+myObj.id;
     }
 };
 xmlhttp.open("GET", "http://bitcoin.mubiz.com/peerinfo", true);
