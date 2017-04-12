@@ -111,17 +111,67 @@
          button.addEventListener("click",function() {
            var adresse = document.getElementById("adresse").value;
            console.log(adresse);
+           if (adresse == "http://bitcoin.mubiz.com/info")
+           {
+             var xmlhttp = new XMLHttpRequest();
+             xmlhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var myObj = JSON.parse(this.responseText);
+                     document.getElementById("info").innerHTML = "\n blocks: "+myObj.blocks+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
+                 }
+             };
+             xmlhttp.open("GET", adresse, true);
+             xmlhttp.send();
+           }
 
+           else if (adresse == "http://bitcoin.mubiz.com/blockchaininfo")
+           {
+             var xmlhttp = new XMLHttpRequest();
+             xmlhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var myObj = JSON.parse(this.responseText);
+                     document.getElementById("info").innerHTML = "\n main: "+myObj.main+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
+                 }
+             };
+             xmlhttp.open("GET", adresse, true);
+             xmlhttp.send();
+           }
 
-           var xmlhttp = new XMLHttpRequest();
-           xmlhttp.onreadystatechange = function() {
-               if (this.readyState == 4 && this.status == 200) {
-                   var myObj = JSON.parse(this.responseText);
-                   document.getElementById("info").innerHTML = "\n blocks: "+myObj.blocks+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfeedifficulty+"\n difficulty: "+myObj.difficulty+"\n chain: "+myObj.chain
-               }
-           };
-           xmlhttp.open("GET", adresse, true);
-           xmlhttp.send();
+           else if (adresse == "http://bitcoin.mubiz.com/mininginfo")
+           {
+             var xmlhttp = new XMLHttpRequest();
+             xmlhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var myObj = JSON.parse(this.responseText);
+                     document.getElementById("info").innerHTML = "\n blocks: "+myObj.blocks+"\n difficulty: "+myObj.difficulty+"\n chain: "+myObj.chain;
+                 }
+             };
+             xmlhttp.open("GET", adresse, true);
+             xmlhttp.send();
+           }
+
+           else if (adresse == "http://bitcoin.mubiz.com/peerinfo")
+           {
+             var xmlhttp = new XMLHttpRequest();
+             xmlhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var myObj = JSON.parse(this.responseText);
+                     document.getElementById("info").innerHTML = "\n id: "+myObj.id;
+                 }
+             };
+             xmlhttp.open("GET", adresse, true);
+             xmlhttp.send();
+           }
+
+           else if(adresse == "")
+           {
+             alert("Veuillez rentrer une adresse URL valide");
+           }
+
+           else {
+             alert("Cette adresse n'a pas encore été étudié");
+           }
+
          });
        </script>
    </div>
