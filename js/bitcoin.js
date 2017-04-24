@@ -5,7 +5,7 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("info").innerHTML = "\n blocks: "+myObj.blocks+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
     }
 };
-xmlhttp.open("GET", "http://bitcoin.mubiz.com/info", true);
+xmlhttp.open("GET", "https://bitcoin.mubiz.com/info", true);
 xmlhttp.send();
 
 
@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("blockchaininfo").innerHTML = "\n main: "+myObj.main+"\n version: "+myObj.version+"\n paytxfee: "+myObj.paytxfee;
     }
 };
-xmlhttp.open("GET", "http://bitcoin.mubiz.com/blockchaininfo", true);
+xmlhttp.open("GET", "https://bitcoin.mubiz.com/blockchaininfo", true);
 xmlhttp.send();
 
 var xmlhttp = new XMLHttpRequest();
@@ -26,7 +26,7 @@ xmlhttp.onreadystatechange = function() {
       document.getElementById("mininginfo").innerHTML = "\n blocks: "+myObj.blocks+"\n difficulty: "+myObj.difficulty+"\n chain: "+myObj.chain;
     }
 };
-xmlhttp.open("GET", "http://bitcoin.mubiz.com/mininginfo", true);
+xmlhttp.open("GET", "https://bitcoin.mubiz.com/mininginfo", true);
 xmlhttp.send();
 
 
@@ -39,5 +39,5 @@ xmlhttp.onreadystatechange = function() {
       document.getElementById("peerinfo").innerHTML = "\n id: "+myObj.id;
     }
 };
-xmlhttp.open("GET", "http://bitcoin.mubiz.com/peerinfo", true);
+xmlhttp.open("GET", "https://bitcoin.mubiz.com/peerinfo", true);
 xmlhttp.send();
