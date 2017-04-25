@@ -11,7 +11,7 @@
 
     <title>Index/Bitcoin</title>
     <link rel="icon" type ="image/x-icon" href="../../img/favicon-bitcoin.ico">
-
+    
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
@@ -77,13 +77,14 @@
               <form id="form">
                 <div class="form-group">
                   <label for="adresse">Adresse URL</label>
-                  <input list="bieres" name="url"type="url" class="form-control" placeholder="Rentrez une adresse URL">
-                  <datalist id="bieres">
-                    <option>https://bitcoin.mubiz.com/info</option>
-                    <option>https://bitcoin.mubiz.com/blockchaininfo</option>
-                    <option>https://bitcoin.mubiz.com/mininginfoo</option>
-                    <option>https://bitcoin.mubiz.com/peerinfo</option>
-                  </datalist>
+                  <!-- <input list="lol" id="adresse" name="url"type="url" class="form-control" placeholder="Rentrez une adresse URL"> -->
+                  <select id="adresse">
+                    <option value="https://bitcoin.mubiz.com/info">Info</option>
+                    <option value="https://bitcoin.mubiz.com/blockchaininfo">Blockchain info</option>
+                    <option value="https://bitcoin.mubiz.com/mininginfo">Mining info</option>
+                    <option value="https://bitcoin.mubiz.com/peerinfo">Peer info</option>
+
+                  </select>
                 </div>
                 <button id="function_bouton" type="button" class="btn btn-secondary">Envoyer</button>
               </form>
