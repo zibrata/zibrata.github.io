@@ -38,7 +38,7 @@
                    <span class="icon-bar"></span>
                    <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand topnav" href="#">Ingénierie Financière / Blockchain</a>
+               <a class="navbar-brand topnav" href="../../index.html">Ingénierie Financière / Blockchain</a>
            </div>
            <!-- Collect the nav links, forms, and other content for toggling -->
            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -77,7 +77,13 @@
               <form id="form">
                 <div class="form-group">
                   <label for="adresse">Adresse URL</label>
-                  <input id="adresse" name="url"type="url" class="form-control" placeholder="Rentrez une adresse URL">
+                  <input list="bieres" name="url"type="url" class="form-control" placeholder="Rentrez une adresse URL">
+                  <datalist id="bieres">
+                    <option>https://bitcoin.mubiz.com/info</option>
+                    <option>https://bitcoin.mubiz.com/blockchaininfo</option>
+                    <option>https://bitcoin.mubiz.com/mininginfoo</option>
+                    <option>https://bitcoin.mubiz.com/peerinfo</option>
+                  </datalist>
                 </div>
                 <button id="function_bouton" type="button" class="btn btn-secondary">Envoyer</button>
               </form>
@@ -90,7 +96,7 @@
        </div>
 
        <div class="container">
-         <h2>Info</h2>
+         <h2>Informations :</h2>
            <div class="row">
              <br>
              <div class="col-lg-12 col-xs-6">
