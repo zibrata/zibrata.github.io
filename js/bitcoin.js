@@ -30,7 +30,7 @@ xmlhttp.open("GET", "https://bitcoin.mubiz.com/mininginfo", true);
 xmlhttp.send();
 
 
-// A FAIRE LE PEER INFO
+
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
